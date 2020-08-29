@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAC,UAAU,CAAV,QAAU,CACN,IAAI,CACD,SAAS,CAAE,QAAQ,CAEtB,EAAE,CACC,SAAS,CAAE,QAAQ",
+    "sources": [
+        "../scss/effects.scss"
+    ],
+    "names": [],
+    "file": "effects.min.css"
+}

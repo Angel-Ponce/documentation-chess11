@@ -1,0 +1,22 @@
+@import "effects";
+.info{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+
+    #myPhoto{
+        margin-left: 30px;
+        width: 250px;
+        height: 250px;
+    }
+
+    animation-name: infoEffe;
+    animation-duration: 0.5s;
+}
+.text{
+    display: flex;
+    padding: 10px;
+    padding-top: 0px;
+    text-align: justify;
+    font-family: 'Alata', sans-serif;
+}
