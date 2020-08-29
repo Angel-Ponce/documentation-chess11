@@ -1,21 +1,24 @@
 @import "effects";
-.info{
+
+@mixin default{
     display: flex;
-    width: 100%;
-    flex-direction: row;
-
-    #myPhoto{
-        margin-left: 30px;
-        width: 250px;
-        height: 250px;
-    }
-
+    width: auto;
+    margin-left: 30px;
     animation-name: infoEffe;
     animation-duration: 0.7s;
 }
+
+.info{
+    @include default();
+    flex-direction: row;
+    #myPhoto{
+        width: 250px;
+        height: 250px;
+    }
+}
 .text{
     display: flex;
-    padding: 10px;
+    padding: 15px;
     padding-top: 0px;
     text-align: justify;
     font-family: 'Alata', sans-serif;
@@ -34,4 +37,31 @@
         transform: scale(1.2);
     }
     }
+}
+
+.index{
+    @include default();
+    flex-direction: column;
+}
+
+.textTitle{
+    display: flex;
+    padding: 5px;
+    margin: 10px;
+    font-size: 30px;
+    text-align: justify;
+    font-family: 'Alata', sans-serif;
+    border: 3px solid black;
+    border-radius: 25px;
+    justify-content: center;
+}
+.textCode{
+    display: flex;
+    padding: 15px;
+    font-size: 18px;
+    font-family: 'Alata', sans-serif;
+    border-radius: 25px;
+    background-color: rgb(41, 39, 39);
+    color: rgb(115, 245, 223);
+    flex-direction: column;
 }

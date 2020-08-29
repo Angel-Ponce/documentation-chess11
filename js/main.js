@@ -1,4 +1,6 @@
-//import { info } from "./info";
-
 let objInfo = new info();
 objInfo.allReady();
+let objIdex = new index();
+objIdex.allReady();
+let objConstants = new constants();
+objConstants.allReady();
