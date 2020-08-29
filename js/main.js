@@ -8,3 +8,7 @@ let objOnArray = new onArray();
 objOnArray.allReady();
 let objPiece = new piece();
 objPiece.allReady();
+let objTile = new tile();
+objTile.allReady();
+let objBoard = new board();
+objBoard.allReady();
