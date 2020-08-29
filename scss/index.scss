@@ -12,11 +12,16 @@ body{
 }
 .varRight{
     display: flex;
+    position: fixed;
     width: 25%;
     height: 100vh;
     background-color: rgb(41, 39, 39);
     flex-direction: column;
 }
+.jump{
+    width: 25%;
+}
+
 .container{
     display: flex;
     width: 75%;
