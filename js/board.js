@@ -53,14 +53,63 @@ class board {
           
           let text3 = document.createElement("div");
           text3.classList.add("text");
-          text3.innerHTML = "El método 'createSpaceOfDeaths' recibe como parámetros la propiedad de los tiles, puede des tileDB o tileDW, que serán los tiles lógicos para el espacio de las piezas que sean eliminadas en un juego \
+          text3.innerHTML = "El método 'createSpaceOfDeaths()' recibe como parámetros la propiedad de los tiles, puede des tileDB o tileDW, que serán los tiles lógicos para el espacio de las piezas que sean eliminadas en un juego \
           el siguiente parámetro es el elemento del DOM donde se deberán dibujar, puede ser deathBlack o deathWhite";
 
           let codeExample2 = document.createElement("div");
           codeExample2.classList.add("textCode");
           codeExample2.innerHTML = "createSpaceOfDeahts(tilesName,deathName)";
 
-          let elements = [title,text1,codeExample1,text2,text3,codeExample2];
+          let text4 = document.createElement("div");
+          text4.classList.add("text");
+          text4.innerHTML = "El método 'createBoard()' tiene la función de crear un tablero virtual en el DOM creando objetos de tipo tile, y de tipo piece, también se encarga de crear la alternación de los colores del tablero y acá se llama al método createSpaceOfDeaths(), para que se dibujen en el DOM al mismo tiempo, también se hace llamada al método buildTeams()";
+
+          let codeExample3 = document.createElement("div");
+          codeExample3.classList.add("textCode");
+          codeExample3.innerHTML = "createBoard()";
+
+          let elements = [title,text1,codeExample1,text2,text3,codeExample2,text4,codeExample3];
+          
+          let element1 = new Method("El método 'buildTeams()' tienen la tarea de construir a los equipos del ajedrez, organizar su posición y todas las propiedades innerElement de cada tile, aca se hace la llamada a initialPositions()",
+                  "buildTeams()");
+          element1.pushElements(elements);
+
+          let element2 = new Method("El método 'initialPositions()' se encarga de dibujar en el DOM las piezas en el tablero con las posiciones correctas al inicio de una partida de ajedrez, también se encarga de poner las piezas tipo 'empty', también se hace la llamada al método eventClick()",
+                  "initialPositions()");
+          element2.pushElements(elements);
+
+          let element3 = new Method("El método 'eventClick()' como su nombre lo indica, es el encargado de darles el oyente de acción a los tiles, para saber cuando el usuario ha dado un click en el tablero, dentro de cada evento se hace la llamada al método change()",
+                  "eventClick()");
+          element3.pushElements(elements);
+
+          let element4 = new Method("El método 'change()' se encarga de realizar la validación de moviemientos y el movimiento de las piezas, claramente utiliza métodos externos para validar, pero su fin principal es que en cada click realice esta operación, también es el encargado de controlar los clicks y los turnos, recibe de parámetro un tile, para estudiar su posición y demás propiedades",
+                  "change(tile)");
+          element4.pushElements(elements);
+
+          let element5 = new Method("El método 'move()' recibe 2 parámetros, la posición final y la posición inicial, pero se le pasan 2 piezas con esta información, a partir de esto, realiza un movimiento de la pieza inicial hacia la pieza final.",
+                  "move(pInicial, pFinal)");
+          element5.pushElements(elements);
+
+          let element6 = new Method("El método 'validate()' recibe de parámetro una pieza, la cuál deberá estudiar para validar sus posibles movimientos en el tablero, utliza funciones externas para tal validación",
+                  "validate(piece)");
+          element6.pushElements(elements);
+
+          let element7 = new Method("El método 'alternTurn()' se encarga de alternar el turno, cuando un movimiento fue aceptado, también hace otra función que es indicarle al jugador en que turno esta el juego mediante la variables turnDer y tunrIzq",
+                  "alternTurn()");
+          element7.pushElements(elements);
+
+          let element8 = new Method("El método 'killed()' se encarga de la acción al eliminar una pieza, la pieza que sea eliminada pasas al espacio de muertos del tablero, y de esta transición se encarga este método. Recibe como parámetro la pieza que será eliminada",
+                  "killed(death)");
+          element8.pushElements(elements);
+
+          let element9 = new Method("El método 'singleGame()' no es un método utilizado en el juego, pero sirve para darle la propiedad a un botón del DOM de cambiar el modo de juego a 'Un solo jugador', se reinicia el tablero y empieza en modal=single",
+                  "singleGame()");
+          element9.pushElements(elements);
+
+          let element10 = new Method("El método 'multiGame()' realiza lo mismo que el método singleGame pero pone la propiedad modal en multi, para iniciar un nuevo juego a '2 jugadores'",
+                  "multiGame()");
+          element10.pushElements(elements);
+        
           this.putElementsOnContainers(elements,this.containerBoard);
           this.container.appendChild(this.containerBoard);
       });

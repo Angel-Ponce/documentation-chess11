@@ -12,3 +12,5 @@ let objTile = new tile();
 objTile.allReady();
 let objBoard = new board();
 objBoard.allReady();
+let objMovements = new movements();
+objMovements.allReady();
