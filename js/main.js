@@ -6,3 +6,5 @@ let objConstants = new constants();
 objConstants.allReady();
 let objOnArray = new onArray();
 objOnArray.allReady();
+let objPiece = new piece();
+objPiece.allReady();
