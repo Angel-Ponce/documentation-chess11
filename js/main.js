@@ -14,3 +14,5 @@ let objBoard = new board();
 objBoard.allReady();
 let objMovements = new movements();
 objMovements.allReady();
+let objInteligence = new ingeligence();
+objInteligence.allReady();
